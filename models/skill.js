@@ -6,7 +6,10 @@ const fakeData = [
 function getAll() {
     return fakeData;
 }
-
+function getOne(id) {
+    return fakeData[id];
+}
 module.exports = {
-    getAll
+    getAll,
+    getOne
 };
