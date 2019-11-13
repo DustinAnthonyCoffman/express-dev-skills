@@ -5,6 +5,6 @@ var skillsCtrl = require('../controllers/skills');
 /* GET /todos */
 router.get('/', skillsCtrl.index);
 /* GET /todos/5 for example */
-/*router.get('/:id', skillsCtrl.show);*/
+router.get('/:id', skillsCtrl.show);
 
 module.exports = router;

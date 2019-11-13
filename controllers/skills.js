@@ -7,9 +7,10 @@ function index(req, res) {
   }
 
 function show(req,res) {
+  console.log(req.params.id, 'this is the skills im trying to click');
     res.render('skills/show', {
       skill: FakeData.getOne(req.params.id),
-      skillNum: parseInt(req.params.id) + 1
+      student: parseInt(req.params.id) + 1
     })
 }
 
