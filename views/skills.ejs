@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Students</title>
+</head>
+<body>
+    <h1>Skills</h1>
+    <a href="/">Home</a>   
+    <a href="/newSkills">Add Skill</a>  
+    <h1>Dev Skills Of <%= skill.student %></h1>
+   
+    <ul>
+        <% skill.skills.forEach( s => { %>
+            <li><%=s%></li>
+    <%    }) %>
+    </ul>
+</body>
+</html>
