@@ -2,8 +2,8 @@ let FakeData = require('../models/skill');
 
 
   function showStudents(req, res) {
-    res.render('students', {        //ties to views/students 
-        pasta: FakeData.getAll()      //navigates to views, skill will now be an object
+    res.render('students', {        //res.render adds student to views/ 
+        skills: FakeData.getAll()      //navigates to views, skill will now be an object
       });                             //within index
     }                              //pasta contains the return data of fakeData because its receiving what getAll sends us
      //however this doesn't call anything within our page, 

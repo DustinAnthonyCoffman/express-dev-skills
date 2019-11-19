@@ -9,11 +9,11 @@
 <body>
     <h1>Skills</h1>
     <a href="/">Home</a>   
-    <a href="/newSkills">Add Skill</a>  
-    <h1>Dev Skills Of <%= skill.student %></h1>
+    <a href="/newSkills/<%= idx %>">Add Skill</a>  
+    <h1>Dev Skills Of <%= studentSkills.student %></h1>
    
     <ul>
-        <% skill.skills.forEach( s => { %>
+        <% studentSkills.skills.forEach( s => { %>
             <li><%=s%></li>
     <%    }) %>
     </ul>

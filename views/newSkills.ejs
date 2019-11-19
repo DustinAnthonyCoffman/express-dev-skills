@@ -5,12 +5,21 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+
 <h1>yo you made it to newSkills</h1>
+  
+<form action="/skills" method="POST" autocomplete="off">
+  <input type="text" name="brandNew">
+  <input type="hidden" name="index" value="<%= index %>">
+    <button type='submit'>Save Skill</button>
+
+  </form>
+
 
     <a href="/">Home</a> | 
     <a href="/students">Students</a>
 
 
-      </form>
+      
   </body>
 </html>

@@ -3,7 +3,9 @@ var router = express.Router();
 var newSkillsCtrl = require('../controllers/newSkills');
 
 
-router.get('/', newSkillsCtrl.addSkills);
+
+router.get('/:id', newSkillsCtrl.addSkills);
+
 
 
 module.exports = router;
