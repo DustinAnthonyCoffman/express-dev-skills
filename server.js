@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var methodOverride  = require("method-override");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -8,6 +9,7 @@ var indexRouter = require('./routes/index');
 var skillsRouter = require('./routes/skills');
 var studentsRouter = require('./routes/students');
 var newSkillsRouter = require('./routes/newSkills');
+var deleteSkillsRouter = require('./routes/deleteSkills');
 
 var app = express();
 
@@ -20,11 +22,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
 app.use('/students', studentsRouter);
 app.use('/newSkills', newSkillsRouter);
+app.use('/deleteSkills', deleteSkillsRouter);
 
 
 // catch 404 and forward to error handler

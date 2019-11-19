@@ -7,8 +7,8 @@ let FakeData = require('../models/skill');
     });                             //within index
   }           
 
-function show(req,res) {
-    res.render('skills', { //create an object with access to current url and database
+function show(req,res) {    //res.render is actually make skills views/skills
+    res.render('skills', { // create an object with access to current url and database
       studentSkills: FakeData.getOne(req.params.id), //this will be an array item based on the index
       idx: req.params.id, //this will be our unique <a> + index, resulting in request.params.id be a single number 
       student: parseInt(req.params.id) + 1    //we need to use a real number for student
@@ -16,6 +16,7 @@ function show(req,res) {
 } 
 
 function addSkill(req,res) {
+  console.log(req.body);
   FakeData.create(req.body.brandNew, req.body.index);    //req.body is whatever comes from your form, whatever payload exists
   res.redirect(`skills/${req.body.index}`); 
 }

@@ -15,8 +15,12 @@ function create(data, idx) {
 function getOne(id) {
     return fakeData[id];
 }
+function deleteThis(idx) {
+    fakeData[idx].skills.splice(idx, 1);
+}
 module.exports = {
     getAll,
     create,
+    deleteThis,
     getOne
 };

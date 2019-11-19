@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Students</title>
+    <title>Delete Skills</title>
 </head>
 <body>
-    <h1>Skills</h1>
-    <a href="/">Home</a>   
-    <a href="/newSkills/<%= idx %>">Add Skill</a>  
-    <a href="/deleteSkills/<%= idx %>">Delete Skill</a>  
-    <h1>Dev Skills Of <%= studentSkills.student %></h1>
-   
+ <h1>Delete a skill</h1>
+ <form action="/deleteSkills/<%=idx%>?_method=DELETE"
+    method="POST" class="delete-form">
     <ul>
         <% studentSkills.skills.forEach( s => { %>
-            <li><%=s%></li>
+          <li>  <button type="submit"> <%=s%> </button> </li>
     <%    }) %>
     </ul>
+
+    </form>
 </body>
 </html>
-
